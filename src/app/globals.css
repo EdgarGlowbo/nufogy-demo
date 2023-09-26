@@ -4,10 +4,15 @@
 
 :root {
 	/* Variables */
-}
-
-input[type="text"] {
-	all: unset;
+	--text: #f8f8f8;
+	--background: #1c1c1c;
+	--primary: #38c284;
+	--secondary: #0d5163;
+	--accent: #232323;
+	--success: #50ffb4;
+	--neutral: #ebecf0;
+	--danger: #ea3439;
+	--warning: #ffab00;
 }
 
 /* Elements prestyles */
@@ -16,27 +21,38 @@ footer,
 main,
 form,
 div {
-	@apply flex flex-col w-full items-center justify-center;
+	@apply flex flex-col w-full items-center justify-center bg-background;
 }
 
 /* react icons */
 svg {
-	@apply h-8 w-8;
+	@apply h-8 w-8 text-primary;
 }
 
 h1 {
-	@apply font-bold text-2xl;
+	@apply font-bold text-2xl text-primary font-heading;
 }
 
 span,
 p {
-	@apply text-base;
+	@apply text-base font-base text-text;
 }
 
 button {
-	@apply bg-gray-400 rounded-[3rem] px-2 py-3 my-2;
+	@apply bg-accent rounded-[3rem] px-2 py-3 my-2;
 }
 
 button > span {
 	@apply text-sm;
+}
+
+input[type="text"] {
+	all: unset;
+	@apply text-text bg-accent;
+}
+
+@layer components {
+	.dot {
+		@apply w-2 h-2 rounded-full bg-text mx-1 animate-bounce opacity-40;
+	}
 }
