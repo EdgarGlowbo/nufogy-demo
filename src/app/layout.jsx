@@ -1,3 +1,5 @@
+import BottomTabs from "@/components/BottomTabs";
+import FloatingButton from "@/components/FloatingButton";
 import "./globals.css";
 import { Major_Mono_Display, Philosopher, Quicksand } from "next/font/google";
 
@@ -26,9 +28,12 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<body
-				className={`${quicksand.variable} ${majorMonoDisplay.variable} ${philosopher.variable}`}
+				className={`${quicksand.variable} ${majorMonoDisplay.variable} ${philosopher.variable} h-screen w-screen relative`}
 			>
 				{children}
+				{/* Add button */}
+				<FloatingButton />
+				<BottomTabs />
 			</body>
 		</html>
 	);

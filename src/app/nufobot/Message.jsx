@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import { FaRobot, FaUser } from "react-icons/fa6";
 
-export default function Message({ message, status }) {
+export default function Message({ message, role }) {
 	return (
-		<div className={`chat ${status === "sent" ? "chat-end" : "chat-start"} `}>
+		<div className={`chat ${role === "user" ? "chat-end" : "chat-start"} `}>
 			<div className="chat-image avatar">
 				<div className="w-10 rounded-full">
-					{status === "sent" ? <FaUser /> : <FaRobot />}
+					{role === "user" ? <FaUser /> : <FaRobot />}
 				</div>
 			</div>
 			{
 				<div
 					className={`chat-bubble w-fit ${
-						status === "received" ? "bg-secondary" : ""
+						role === "system" ? "bg-secondary" : ""
 					}`}
 				>
 					<p>{message}</p>

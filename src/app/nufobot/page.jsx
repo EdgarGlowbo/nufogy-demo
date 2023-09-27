@@ -187,7 +187,7 @@ export default function NufobotPage() {
 			<footer className="bg-transparent rounded-[3.5rem] px-3 pt-2 pb-8">
 				<form
 					id="inputForm"
-					onSubmit={(e) => handleSubmit(e)}
+					onSubmit={(e) => handleSubmit(e, presetValue)}
 					className="flex-row rounded-[3.5rem] border-2 border-accent bg-accent relative py-2"
 				>
 					<input

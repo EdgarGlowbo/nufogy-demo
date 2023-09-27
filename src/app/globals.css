@@ -55,4 +55,7 @@ input[type="text"] {
 	.dot {
 		@apply w-2 h-2 rounded-full bg-text mx-1 animate-bounce opacity-40;
 	}
+	.bottom-tab {
+		@apply p-2 rounded-none bg-background w-full flex items-center justify-center;
+	}
 }
