@@ -21,7 +21,9 @@ export default function ProgramsPage() {
 						<FaCaretRight />
 					</div>
 					<div className="items-start">
-						<button className="">Crear dieta</button>
+						<button className="bg-secondary">
+							<span>Crear dieta</span>
+						</button>
 					</div>
 				</div>
 				{/* Rutinas card */}
@@ -37,7 +39,9 @@ export default function ProgramsPage() {
 						<FaCaretRight />
 					</div>
 					<div className="items-start">
-						<button className="">Crear rutina</button>
+						<button className="bg-secondary">
+							<span>Crear rutina</span>
+						</button>
 					</div>
 				</div>
 			</main>
