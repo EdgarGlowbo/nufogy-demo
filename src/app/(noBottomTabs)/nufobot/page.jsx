@@ -28,7 +28,7 @@ export default function NufobotPage() {
 	return (
 		<div className="h-screen w-screen">
 			{/* chat header */}
-			<header className="flex-row justify-start py-4 border-b-2 border-accent">
+			<header className="py-4 border-b-2 border-accent">
 				{/* go back btn */}
 				<Link href="/">
 					<button className="p-2 bg-transparent">
@@ -50,12 +50,12 @@ export default function NufobotPage() {
 					</div>
 				</div>
 			</header>
-			<main className="px-3 py-2 overflow-y-auto justify-start flex-1">
+			<main className="px-3 py-2 overflow-y-auto justify-start flex-1 bg-fallback-bg">
 				{showPresets ? (
 					<>
-						<div>
+						<div className="bg-fallback-bg">
 							<FaDumbbell />
-							<div>
+							<div className="bg-fallback-bg">
 								<button
 									type="submit"
 									form="inputForm"
@@ -85,9 +85,9 @@ export default function NufobotPage() {
 							</div>
 						</div>
 
-						<div>
+						<div className="bg-fallback-bg">
 							<FaAppleWhole />
-							<div>
+							<div className="bg-fallback-bg">
 								<button type="submit" form="inputForm" className="bg-accent">
 									<span>
 										¿Qué debo comer antes de un entrenamiento matutino para
@@ -103,9 +103,9 @@ export default function NufobotPage() {
 							</div>
 						</div>
 
-						<div>
+						<div className="bg-fallback-bg">
 							<FaChartSimple />
-							<div>
+							<div className="bg-fallback-bg">
 								<button type="submit" form="inputForm" className="bg-accent">
 									<span>
 										Por favor, dame un resumen de mi rendimiento de la semana
@@ -125,13 +125,13 @@ export default function NufobotPage() {
 					<>
 						{/* Chat bubbles samples */}
 						{/* User */}
-						<div className="chat chat-end">
-							<div className="chat-image avatar">
-								<div className="w-10 rounded-full">
+						<div className="chat chat-end bg-fallback-bg">
+							<div className="chat-image avatar bg-fallback-bg">
+								<div className="w-10 rounded-full bg-fallback-bg">
 									<FaUser />
 								</div>
 							</div>
-							<div className="chat-bubble w-fit">
+							<div className="chat-bubble w-fit bg-accent">
 								<p>
 									Estoy buscando una rutina de entrenamiento de fuerza
 									personalizada
@@ -139,9 +139,9 @@ export default function NufobotPage() {
 							</div>
 						</div>
 						{/* Nufobot */}
-						<div className="chat chat-start">
-							<div className="chat-image avatar">
-								<div className="w-10 rounded-full">
+						<div className="chat chat-start bg-fallback-bg">
+							<div className="chat-image avatar bg-fallback-bg">
+								<div className="w-10 rounded-full bg-fallback-bg">
 									<FaRobot />
 								</div>
 							</div>
@@ -165,9 +165,9 @@ export default function NufobotPage() {
 						</div>
 
 						{/* {Nufobot writting} */}
-						<div className="chat chat-start">
-							<div className="chat-image avatar">
-								<div className="w-10 rounded-full">
+						<div className="chat chat-start bg-fallback-bg">
+							<div className="chat-image avatar bg-fallback-bg">
+								<div className="w-10 rounded-full bg-fallback-bg">
 									<FaRobot />
 								</div>
 							</div>

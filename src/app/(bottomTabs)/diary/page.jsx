@@ -5,11 +5,11 @@ export default function DiaryPage() {
 	return (
 		<div className="bg-fallback-bg flex-1">
 			{/* Date Slider */}
-			<div className="flex-row justify-start relative top-0 py-3 px-1">
+			<header className="relative top-0 py-3 px-1">
 				<FaArrowLeft />
 				<h1>Hoy</h1>
 				<FaArrowRight />
-			</div>
+			</header>
 			{/* No routine or diet selected */}
 			<main className="bg-fallback-bg p-1 flex-1">
 				<div className="rounded-xl p-2 flex-row">

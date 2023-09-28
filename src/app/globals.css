@@ -76,4 +76,7 @@ input[type="text"] {
 	.bottom-tab > button {
 		@apply flex items-center justify-center bg-background p-0 m-0 h-full w-full;
 	}
+	.top-tab {
+		@apply bg-transparent border-b-2 border-transparent rounded-none w-24;
+	}
 }
