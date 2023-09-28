@@ -25,6 +25,9 @@ div {
 	@apply flex flex-col w-full items-center justify-center bg-background;
 }
 
+header {
+	@apply flex-row h-16 justify-start px-3;
+}
 /* react icons */
 svg {
 	@apply h-8 w-8 text-primary;
@@ -39,6 +42,10 @@ h4 {
 
 h2 {
 	@apply text-xl font-base;
+}
+
+h3 {
+	@apply text-base font-base;
 }
 
 span,

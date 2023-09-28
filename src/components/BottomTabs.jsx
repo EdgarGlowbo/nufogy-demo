@@ -11,12 +11,12 @@ export default function BottomTabs() {
 					<FaHouse />
 				</button>
 			</Link>
-			<Link href={"/"} className="bottom-tab">
+			<Link href={"/diary"} className="bottom-tab">
 				<button>
 					<FaListCheck />
 				</button>
 			</Link>
-			<Link href={"/"} className="bottom-tab">
+			<Link href={"/programs"} className="bottom-tab">
 				<button>
 					<FaNutritionix />
 				</button>
