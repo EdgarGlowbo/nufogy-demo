@@ -16,14 +16,11 @@ export default function NufobotPage() {
 	const [showPresets, setShowPresets] = useState(true);
 	const promptInput = useRef(null);
 
-	const handleSubmit = (e, presetValue) => {
+	const handleSubmit = (e) => {
 		e.preventDefault();
 		setShowPresets(false);
-		if (promptInput.current && !presetValue) {
+		if (promptInput.current) {
 			const inputValue = promptInput.current.value;
-		}
-		if (presetValue) {
-			console.log(presetValue);
 		}
 
 		e.target.reset();
@@ -187,7 +184,7 @@ export default function NufobotPage() {
 			<footer className="bg-transparent rounded-[3.5rem] px-3 pt-2 pb-8">
 				<form
 					id="inputForm"
-					onSubmit={(e) => handleSubmit(e, presetValue)}
+					onSubmit={(e) => handleSubmit(e)}
 					className="flex-row rounded-[3.5rem] border-2 border-accent bg-accent relative py-2"
 				>
 					<input

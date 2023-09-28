@@ -6,6 +6,7 @@
 	/* Variables */
 	--text: #f8f8f8;
 	--background: #1c1c1c;
+	--fallback-bg: #1d232a;
 	--primary: #38c284;
 	--secondary: #0d5163;
 	--accent: #232323;
@@ -29,8 +30,15 @@ svg {
 	@apply h-8 w-8 text-primary;
 }
 
-h1 {
+h1,
+h2,
+h3,
+h4 {
 	@apply font-bold text-2xl text-primary font-heading;
+}
+
+h2 {
+	@apply text-xl font-base;
 }
 
 span,
@@ -57,5 +65,8 @@ input[type="text"] {
 	}
 	.bottom-tab {
 		@apply p-2 rounded-none bg-background w-full flex items-center justify-center;
+	}
+	.bottom-tab > button {
+		@apply flex items-center justify-center bg-background p-0 m-0 h-full w-full;
 	}
 }

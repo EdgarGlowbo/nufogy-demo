@@ -20,6 +20,9 @@ module.exports = {
 				background: {
 					DEFAULT: "var(--background)",
 				},
+				"fallback-bg": {
+					DEFAULT: "var(--fallback-bg)",
+				},
 				accent: {
 					DEFAULT: "var(--accent)",
 				},

@@ -1,34 +1,32 @@
+import Link from "next/link";
 import React from "react";
-import {
-	FaHouse,
-	FaListCheck,
-	FaNutritionix,
-	FaPlus,
-	FaRobot,
-} from "react-icons/fa6";
+import { FaHouse, FaListCheck, FaNutritionix, FaRobot } from "react-icons/fa6";
 
 export default function BottomTabs() {
 	return (
-		<div className="flex-row fixed bottom-0">
+		<div className="flex-row">
 			{/* Home Dashboard and feed */}
-			<button className="bottom-tab">
-				<FaHouse />
-			</button>
-			{/* Diary */}
-			<button className="bottom-tab">
-				<FaListCheck />
-			</button>
-			{/* Floating illusion
-			<div className="p-2 fixed bottom-4 rounded-full bg-background"></div> */}
-
-			{/* Programs */}
-			<button className="bottom-tab">
-				<FaNutritionix />
-			</button>
+			<Link href={"/"} className="bottom-tab">
+				<button>
+					<FaHouse />
+				</button>
+			</Link>
+			<Link href={"/"} className="bottom-tab">
+				<button>
+					<FaListCheck />
+				</button>
+			</Link>
+			<Link href={"/"} className="bottom-tab">
+				<button>
+					<FaNutritionix />
+				</button>
+			</Link>
 			{/* Nufobot */}
-			<button className="bottom-tab">
-				<FaRobot />
-			</button>
+			<Link href={"/nufobot"} className="bottom-tab">
+				<button>
+					<FaRobot />
+				</button>
+			</Link>
 		</div>
 	);
 }
