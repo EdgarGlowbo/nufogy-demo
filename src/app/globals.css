@@ -25,6 +25,10 @@ div {
 	@apply flex flex-col w-full items-center justify-center bg-background;
 }
 
+main {
+	@apply bg-fallback-bg;
+}
+
 header {
 	@apply flex-row h-16 justify-start px-3;
 }
@@ -39,7 +43,9 @@ h3,
 h4 {
 	@apply font-bold text-2xl text-primary font-heading;
 }
-
+h1 {
+	@apply tracking-wider;
+}
 h2 {
 	@apply text-xl font-base;
 }
