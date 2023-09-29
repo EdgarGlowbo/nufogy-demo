@@ -26,20 +26,29 @@ export default function DietsPage() {
 			<main className="p-1">
 				{/* diet card */}
 				<Link href={`diets/${id}`} className="w-full">
-					<button className="flex w-full items-center justify-start">
-						<span>Aumentar masa - Lic. Andrés</span>
+					<button className="card flex-row w-full items-center justify-start shadow-xl">
+						<div className="card-body  p-2 gap-0 rounded-box items-start">
+							<span>Aumentar masa</span>
+							<span className="opacity-70">Lic. Andrés</span>
+						</div>
 						<FaCaretRight className="ml-auto" />
 					</button>
 				</Link>
 				<Link href={`diets/${id}`} className="w-full">
-					<button className="flex w-full items-center justify-start">
-						<span>Cetogénica - Lic. Andrés</span>
+					<button className="card flex-row w-full items-center justify-start shadow-xl">
+						<div className="card-body p-2 gap-0 rounded-box items-start">
+							<span>Vegana</span>
+							<span className="opacity-70">Nutrióloga Nidia Ruiz</span>
+						</div>
 						<FaCaretRight className="ml-auto" />
 					</button>
 				</Link>
 				<Link href={`diets/${id}`} className="w-full">
-					<button className="flex w-full items-center justify-start">
-						<span>Vegana - Nutrióloga Nidia Ruiz</span>
+					<button className="card flex-row w-full items-center justify-start shadow-xl">
+						<div className="card-body p-2 gap-0 rounded-box items-start">
+							<span>Cetogénica</span>
+							<span className="opacity-70">Lic. Andrés</span>
+						</div>
 						<FaCaretRight className="ml-auto" />
 					</button>
 				</Link>
