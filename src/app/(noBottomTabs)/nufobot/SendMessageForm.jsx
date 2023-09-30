@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaPaperPlane } from "react-icons/fa6";
 import axios from "axios";
 
@@ -23,8 +23,11 @@ export default function SendMessageForm({
 			content: inputMsg,
 			conversation: 1,
 		};
-		setMessages([...messages, message]);
-		scrollRef.current.scrollIntoView({ behaviour: "smooth" });
+		// const newMessages = [...messages];
+		// newMessages.push(message);
+		// setMessages(newMessages);
+		// console.log(newMessages);
+		scrollRef.current.scrollIntoView({ behavior: "smooth" });
 		const res = await axios.post(
 			"https://nufogy-server.fly.dev/nufobot/mensaje/",
 			message
@@ -36,6 +39,9 @@ export default function SendMessageForm({
 			setIsLoading(false);
 		}
 	};
+	useEffect(() => {
+		scrollRef.current.scrollIntoView({ behavior: "smooth" });
+	}, [messages]);
 	return (
 		<form
 			id="inputForm"
