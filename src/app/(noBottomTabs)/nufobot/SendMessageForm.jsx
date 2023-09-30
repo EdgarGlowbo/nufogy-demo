@@ -1,33 +1,39 @@
+"use client";
 import React, { useState } from "react";
 import { FaPaperPlane } from "react-icons/fa6";
+import axios from "axios";
 
-export default function SendMessageForm() {
+export default function SendMessageForm({
+	setShowPresets,
+	messages,
+	setMessages,
+	scrollRef,
+}) {
 	const [isLoading, setIsLoading] = useState(false);
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		setIsLoading(true);
+		setShowPresets(false);
 
 		const formData = new FormData(e.target);
 		const inputMsg = formData.get("inputMsg");
 
 		const message = {
-			"ai role": false,
+			ai_role: false,
 			content: inputMsg,
 			conversation: 1,
 		};
-		console.log(JSON.stringify(message));
+		setMessages([...messages, message]);
+		scrollRef.current.scrollIntoView({ behaviour: "smooth" });
+		const res = await axios.post(
+			"https://nufogy-server.fly.dev/nufobot/mensaje/",
+			message
+		);
 
-		const res = await fetch(process.env.API_URL + "/nufobot/mensaje", {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify(message),
-		});
-
-		console.log(res.status);
-		if (res.status === 201) {
+		if (res.status === 200) {
 			e.target.reset();
+			setMessages(res.data);
+			setIsLoading(false);
 		}
 	};
 	return (
