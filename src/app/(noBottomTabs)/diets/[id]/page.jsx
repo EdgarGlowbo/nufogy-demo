@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { FaArrowLeft, FaDrumstickBite, FaPlus } from "react-icons/fa6";
+import WeekdayGroup from "@/components/WeekdayGroup";
 
 export default function DietPage({ params }) {
 	return (
@@ -39,81 +40,55 @@ export default function DietPage({ params }) {
 						</span>
 					</div>
 				</div>
-				{/* Weekdays */}
-				<div className="bg-fallback-bg flex-row justify-between px-3">
-					<label className="flex flex-col items-center justify-center">
-						<input
-							type="radio"
-							className="radio checked:bg-primary"
-							name="weekday"
-							id="monday"
-						/>
-						<span>L</span>
-					</label>
-					<label className="flex flex-col items-center justify-center">
-						<input
-							type="radio"
-							className="radio checked:bg-primary"
-							name="weekday"
-							id="tuesday"
-						/>
-						<span>M</span>
-					</label>
-					<label className="flex flex-col items-center justify-center">
-						<input
-							type="radio"
-							className="radio checked:bg-primary"
-							name="weekday"
-							id="wednesday"
-						/>
-						<span>X</span>
-					</label>
-					<label className="flex flex-col items-center justify-center">
-						<input
-							type="radio"
-							className="radio checked:bg-primary"
-							name="weekday"
-							id="thursday"
-						/>
-						<span>J</span>
-					</label>
-					<label className="flex flex-col items-center justify-center">
-						<input
-							type="radio"
-							className="radio checked:bg-primary"
-							name="weekday"
-							id="friday"
-						/>
-						<span>V</span>
-					</label>
-					<label className="flex flex-col items-center justify-center">
-						<input
-							type="radio"
-							className="radio checked:bg-primary"
-							name="weekday"
-							id="saturday"
-						/>
-						<span>S</span>
-					</label>
-					<label className="flex flex-col items-center justify-center">
-						<input
-							type="radio"
-							className="radio checked:bg-primary"
-							name="weekday"
-							id="sunday"
-						/>
-						<span>D</span>
-					</label>
+				<div className="my-2 bg-fallback-bg">
+					<WeekdayGroup />
 				</div>
+
 				{/* meal cats */}
 				<div>
 					{/* breakfast card */}
 					<div className="p-1 rounded-3xl">
 						<h3 className="self-start text-text">Desayuno</h3>
-						<ul>
-							<li>
-								<div>
-									<FaPlus />
+						<ul className="menu">
+							<li className="flex flex-row">
+								<div className="w-fit">
+									<FaPlus className=" h-6 w-6" />
+								</div>
+								<span>Agregar un alimento</span>
+							</li>
+						</ul>
+					</div>
+					{/* lunch card */}
+					<div className="p-1 rounded-3xl">
+						<h3 className="self-start text-text">Comida</h3>
+						<ul className="menu">
+							<li className="flex flex-row">
+								<div className="w-fit">
+									<FaPlus className=" h-6 w-6" />
+								</div>
+								<span>Agregar un alimento</span>
+							</li>
+						</ul>
+					</div>
+					{/* dinner card */}
+					<div className="p-1 rounded-3xl">
+						<h3 className="self-start text-text">Cena</h3>
+						<ul className="menu">
+							<li className="flex flex-row">
+								<div className="w-fit">
+									<FaPlus className=" h-6 w-6" />
+								</div>
+								<span>Agregar un alimento</span>
+							</li>
+						</ul>
+					</div>
+					{/* snacks card */}
+					<div className="p-1 rounded-3xl">
+						<h3 className="self-start text-text">Snacks</h3>
+						<ul className="menu">
+							<li className="flex flex-row">
+								<div className="w-fit">
+									<FaPlus className=" h-6 w-6" />
 								</div>
 								<span>Agregar un alimento</span>
 							</li>

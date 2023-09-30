@@ -16,7 +16,7 @@ export default function DiaryPage() {
 					{/* <div className="bg-accent rounded-full p-1 h-16 w-16 mr-3 flex-grow"> */}
 					<FaAppleWhole className="mr-3" />
 					{/* </div> */}
-					<div>
+					<div className="items-start">
 						<h3>Ninguna rutina o dieta seleccionada</h3>
 						<p className="text-sm">
 							Crea una dieta o rutina para registrar tu progreso diario
@@ -25,6 +25,39 @@ export default function DiaryPage() {
 						</p>
 					</div>
 				</div>
+
+				<form>
+					{/* food entry */}
+					<ul className="menu">
+						<li>
+							<label>
+								<input type="checkbox" name="food" id="0" />
+
+								<FaAppleWhole />
+								<div>
+									{/* upper row */}
+									<div className="flex-row">
+										<span>Pechuga de pollo</span>
+									</div>
+									{/* lower row */}
+									<div className="flex-row">
+										<span className="opacity-70">250 gr.</span>
+									</div>
+								</div>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="checkbox" name="exercise" id="0" />
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="checkbox" name="biometric" id="0" />
+							</label>
+						</li>
+					</ul>
+				</form>
 			</main>
 			{/* Routine and Diet Checklist */}
 		</div>

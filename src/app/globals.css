@@ -25,6 +25,10 @@ div {
 	@apply flex flex-col w-full items-center justify-center bg-background;
 }
 
+ul,
+li {
+	@apply w-full;
+}
 main {
 	@apply bg-fallback-bg;
 }
@@ -71,7 +75,9 @@ input[type="text"] {
 	all: unset;
 	@apply text-text bg-accent;
 }
-
+/* input[type="radio"] {
+	all: unset;
+} */
 @layer components {
 	.dot {
 		@apply w-2 h-2 rounded-full bg-text mx-1 animate-bounce opacity-40;
