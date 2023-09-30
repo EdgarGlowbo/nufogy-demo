@@ -15,6 +15,10 @@ import Link from "next/link";
 export default function NufobotPage() {
 	const [showPresets, setShowPresets] = useState(true);
 	const promptInput = useRef(null);
+	// Post request called on submit
+	const sendMessage = async () => {
+		const res = await fetch("https://nufogy-server.fly.dev/nufobot/mensaje/");
+	};
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
