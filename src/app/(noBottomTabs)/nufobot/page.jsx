@@ -11,6 +11,7 @@ import {
 	FaUser,
 } from "react-icons/fa6";
 import Link from "next/link";
+import SendMessageForm from "./SendMessageForm";
 
 export default function NufobotPage() {
 	const [showPresets, setShowPresets] = useState(true);
@@ -186,25 +187,7 @@ export default function NufobotPage() {
 			</main>
 			{/* personalized input area */}
 			<footer className="bg-transparent rounded-[3.5rem] px-3 pt-2 pb-8">
-				<form
-					id="inputForm"
-					onSubmit={(e) => handleSubmit(e)}
-					className="flex-row rounded-[3.5rem] border-2 border-accent bg-accent relative py-2"
-				>
-					<input
-						ref={promptInput}
-						type="text"
-						placeholder="Escribe tu input personalizado"
-						className="!h-full !w-full !pr-[2.25rem] !pl-2"
-					/>
-					{/* send button */}
-					<button
-						className="bg-transparent p-1 m-0 absolute right-[12px]"
-						type="submit"
-					>
-						<FaPaperPlane className="h-4 w-4" />
-					</button>
-				</form>
+				<SendMessageForm />
 			</footer>
 		</div>
 	);
