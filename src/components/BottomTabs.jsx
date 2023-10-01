@@ -7,7 +7,7 @@ import { FaHouse, FaListCheck, FaNutritionix, FaRobot } from "react-icons/fa6";
 export default function BottomTabs() {
 	const pathname = usePathname();
 	return (
-		<div className="flex-row">
+		<div className="flex-row h-12 py-0.5">
 			{/* Home Dashboard and feed */}
 			<Link href={"/"} className="bottom-tab">
 				<button>

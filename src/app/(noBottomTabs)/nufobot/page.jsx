@@ -65,7 +65,7 @@ export default function NufobotPage() {
 	return (
 		<div className="h-screen w-screen">
 			{/* chat header */}
-			<header className="py-4 border-b-2 border-accent">
+			<header className="border-b-2 border-accent">
 				{/* go back btn */}
 				<Link href="/">
 					<button className="p-2 bg-transparent">

@@ -6,8 +6,8 @@ export default function HomeLayout({ children }) {
 	const pathname = usePathname();
 
 	return (
-		<div className="h-full w-full bg-fallback-bg block">
-			<header className="flex-col h-fit py-2">
+		<div className="h-screen w-screen bg-fallback-bg block">
+			<header className="flex-col h-[7.5rem] py-2 fixed top-0 z-[1]">
 				<div className="flex-row">
 					<h1 className="font-nufogy-typo">Nufogy</h1>
 					<FaGear className="ml-auto" />
@@ -31,7 +31,8 @@ export default function HomeLayout({ children }) {
 					</Link>
 				</div>
 			</header>
-			{children}
+			{/* padding values account for heights of fixed header and bottom tabs */}
+			<div className="pt-[8.5rem] pb-[3.25rem] h-full w-full">{children}</div>
 		</div>
 	);
 }

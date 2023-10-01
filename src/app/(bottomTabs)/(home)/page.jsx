@@ -1,9 +1,10 @@
 import React from "react";
+import Link from "next/link";
 import { FaCalendar } from "react-icons/fa6";
 
 export default function DashboardPage() {
 	return (
-		<div className="bg-fallback-bg p-2">
+		<div className="bg-fallback-bg p-2 flex-1 justify-start">
 			{/* Gold ad */}
 			<div className="rounded-2xl mb-3 p-1">
 				<div className="flex-row">
@@ -14,9 +15,11 @@ export default function DashboardPage() {
 					Obtén Gold para una experiencia sin anuncios.
 				</span>
 				<div>
-					<button className="rounded-3xl bg-primary">
-						<span className="text-xl text-accent">Beneficios de Gold</span>
-					</button>
+					<Link href={"pricing"}>
+						<button className="rounded-3xl bg-primary">
+							<span className="text-xl text-accent">Beneficios de Gold</span>
+						</button>
+					</Link>
 				</div>
 			</div>
 			<main className="p-1 bg-fallback-bg">
