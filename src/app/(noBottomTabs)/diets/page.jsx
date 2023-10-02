@@ -32,7 +32,7 @@ export default function DietsPage() {
 						<FaCaretRight className="ml-auto" />
 					</button>
 				</Link>
-				<Link href={`diets/${id}`} className="w-full">
+				<Link href={`diets/fakediet`} className="w-full">
 					<button className="card flex-row w-full items-center justify-start shadow-xl">
 						<div className="card-body p-2 gap-0 rounded-box items-start">
 							<span>Vegana</span>
@@ -41,7 +41,7 @@ export default function DietsPage() {
 						<FaCaretRight className="ml-auto" />
 					</button>
 				</Link>
-				<Link href={`diets/${id}`} className="w-full">
+				<Link href={`diets/fakediet`} className="w-full">
 					<button className="card flex-row w-full items-center justify-start shadow-xl">
 						<div className="card-body p-2 gap-0 rounded-box items-start">
 							<span>Cetogénica</span>
