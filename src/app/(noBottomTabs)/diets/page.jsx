@@ -5,8 +5,6 @@ import { FaCaretRight, FaPlus, FaArrowLeft } from "react-icons/fa6";
 import Link from "next/link";
 
 export default function DietsPage() {
-	const id = 1;
-
 	return (
 		<div>
 			<header className="justify-center items-center">
@@ -25,7 +23,7 @@ export default function DietsPage() {
 			</div>
 			<main className="p-1">
 				{/* diet card */}
-				<Link href={`diets/${id}`} className="w-full">
+				<Link href={`diets/fakediet`} className="w-full">
 					<button className="card flex-row w-full items-center justify-start shadow-xl">
 						<div className="card-body  p-2 gap-0 rounded-box items-start">
 							<span>Aumentar masa</span>

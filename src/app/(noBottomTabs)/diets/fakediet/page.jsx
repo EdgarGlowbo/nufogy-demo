@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FaArrowLeft, FaDrumstickBite, FaPlus } from "react-icons/fa6";
 import WeekdayGroup from "@/components/WeekdayGroup";
 
-export default function DietPage({ params }) {
+export default function DietPage() {
 	return (
 		<div>
 			<header>

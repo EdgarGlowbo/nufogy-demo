@@ -16,7 +16,7 @@ export default function Post({
 			<div className="card bg-accent shadow-xl mb-3">
 				<div className="card-body rounded-2xl rounded-b-none p-2">
 					{/* post owner */}
-					<Link href={"/profile/1"} className="self-start">
+					<Link href={"/profile/fakeprofile"} className="self-start">
 						<div className="flex-row justify-start">
 							{/* Avatar */}
 							<div className="avatar justify-start w-fit">
