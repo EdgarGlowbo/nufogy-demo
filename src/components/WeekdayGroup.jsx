@@ -64,7 +64,7 @@ export default function WeekdayGroup() {
 				<label
 					key={weekday.id}
 					ref={(el) => refs.current.push(el)}
-					className="btn flex flex-col items-center justify-center"
+					className="btn flex flex-col items-center justify-center bg-accent"
 				>
 					<input
 						type="radio"

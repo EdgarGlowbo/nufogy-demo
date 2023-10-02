@@ -45,7 +45,7 @@ h1,
 h2,
 h3,
 h4 {
-	@apply font-bold text-2xl text-primary font-heading;
+	@apply font-bold text-2xl text-primary font-base;
 }
 h1 {
 	@apply tracking-wider;
@@ -78,6 +78,9 @@ input[type="text"] {
 /* input[type="radio"] {
 	all: unset;
 } */
+input[type="number"] {
+	@apply text-text bg-secondary text-center;
+}
 @layer components {
 	.dot {
 		@apply w-2 h-2 rounded-full bg-text mx-1 animate-bounce opacity-40;
@@ -90,5 +93,8 @@ input[type="text"] {
 	}
 	.top-tab {
 		@apply bg-transparent border-b-2 border-transparent rounded-none w-24;
+	}
+	.diary-entry {
+		@apply flex justify-center items-center h-full w-full gap-x-2 bg-background;
 	}
 }

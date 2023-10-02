@@ -29,7 +29,7 @@ export default function SendMessageForm({
 		// console.log(newMessages);
 		scrollRef.current.scrollIntoView({ behavior: "smooth" });
 		const res = await axios.post(
-			"https://nufogy-server.fly.dev/nufobot/mensaje/",
+			"https://nufogy-api.fly.dev/nufobot/mensaje/",
 			message
 		);
 
@@ -45,6 +45,7 @@ export default function SendMessageForm({
 	return (
 		<form
 			id="inputForm"
+			autoComplete="off"
 			onSubmit={(e) => handleSubmit(e)}
 			className="flex-row rounded-[3.5rem] border-2 border-accent bg-accent relative py-2"
 		>

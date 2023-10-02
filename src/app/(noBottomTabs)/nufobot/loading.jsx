@@ -3,13 +3,9 @@ import { FaRobot } from "react-icons/fa6";
 
 export default function Loading() {
 	return (
-		<div className="flex-1">
-			<FaRobot className="h-12 w-12" />
-			<div className="w-fit flex-row">
-				<div className="dot"></div>
-				<div className="dot"></div>
-				<div className="dot"></div>
-			</div>
+		<div className="h-screen w-screen">
+			<FaRobot className="h-12 w-12 mb-4" />
+			<span className="loading loading-spinner text-primary"></span>
 		</div>
 	);
 }

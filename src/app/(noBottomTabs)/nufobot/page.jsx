@@ -54,7 +54,7 @@ export default function NufobotPage() {
 	useEffect(() => {
 		const fetchData = async () => {
 			const res = await axios.get(
-				"https://nufogy-server.fly.dev/nufobot/mensaje/"
+				"https://nufogy-api.fly.dev/nufobot/mensaje/"
 			);
 
 			setMessages(res.data);
