@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { FaArrowLeft, FaRobot } from "react-icons/fa6";
+import { FaArrowLeft, FaPlus, FaRobot } from "react-icons/fa6";
 import Link from "next/link";
 import SendMessageForm from "./SendMessageForm";
 
@@ -49,13 +49,24 @@ const presetsData = [
 export default function NufobotPage() {
 	const [showPresets, setShowPresets] = useState(true);
 	const [messages, setMessages] = useState([]);
+	const [conversationId, setConversationId] = useState(0);
 	const scrollDivRef = useRef();
-
+	const createConversation = async () => {
+		const res = await axios.post(
+			"https://nufogy-api.fly.dev/nufobot/conversacion/",
+			{
+				user: 1,
+			}
+		);
+		console.log(res.data);
+	};
 	useEffect(() => {
 		const fetchData = async () => {
 			const res = await axios.get(
 				"https://nufogy-api.fly.dev/nufobot/mensaje/"
 			);
+
+			// const filteredData = res.data.filter(msg => msg.conversation === conversationId )
 
 			setMessages(res.data);
 		};
@@ -85,6 +96,14 @@ export default function NufobotPage() {
 						<div className="rounded-full bg-success p-1 h-1 w-1 mr-1"></div>
 						<span className="text-success">En línea</span>
 					</div>
+				</div>
+				<div className="w-fit ml-auto">
+					<button
+						className="bg-transparent"
+						onClick={() => createConversation()}
+					>
+						<FaPlus />
+					</button>
 				</div>
 			</header>
 			<main className="px-3 py-2 overflow-y-auto justify-start flex-1 bg-fallback-bg">
