@@ -4,13 +4,13 @@
 
 :root {
 	/* Variables */
-	--text: #f8f8f8;
-	--background: #1c1c1c;
-	--fallback-bg: #1d232a;
-	--primary: #38c284;
-	--secondary: #0d5163;
-	--accent: #232323;
-	--success: #50ffb4;
+	--text: #27232a;
+	--background: #fcfaed;
+	--fallback-bg: #dbdaf1;
+	--primary: #2a2845;
+	--secondary: #345f91;
+	--accent: #4a9196;
+	--success: #40b086;
 	--neutral: #ebecf0;
 	--danger: #ea3439;
 	--warning: #ffab00;
@@ -80,6 +80,22 @@ input[type="text"] {
 } */
 input[type="number"] {
 	@apply text-text bg-secondary text-center;
+}
+
+.bg-accent > .text-accent {
+	@apply text-background;
+}
+.bg-primary > .text-text {
+	@apply text-background;
+}
+.bg-secondary > .text-accent {
+	@apply text-background;
+}
+.bg-secondary > .text-text {
+	@apply text-background;
+}
+.bg-accent > .text-text {
+	@apply text-background;
 }
 @layer components {
 	.dot {

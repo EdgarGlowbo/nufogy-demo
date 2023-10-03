@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function DietsPage() {
 	return (
-		<div>
+		<div className="h-screen w-screen justify-start bg-background">
 			<header className="justify-center items-center">
 				<Link href={"programs"} className="mr-auto">
 					<FaArrowLeft />

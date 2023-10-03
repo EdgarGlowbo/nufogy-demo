@@ -52,13 +52,13 @@ export default function SendMessageForm({
 			id="inputForm"
 			autoComplete="off"
 			onSubmit={(e) => handleSubmit(e)}
-			className="flex-row rounded-[3.5rem] border-2 border-accent bg-accent relative py-2"
+			className="flex-row rounded-[3.5rem] border-2 border-text bg-background relative py-2"
 		>
 			<input
 				type="text"
 				name="inputMsg"
 				placeholder="Escribe tu input personalizado"
-				className="!h-full !w-full !pr-[2.25rem] !pl-2"
+				className="!h-full !w-full !pr-[2.25rem] !pl-2 !bg-background !rounded-[3.5rem]"
 			/>
 			{/* send button */}
 			<button

@@ -60,6 +60,7 @@ export default function NufobotPage() {
 		);
 		const conversationId = res.data[res.data.length - 1].Id;
 		setMessages([]);
+		setShowPresets(true);
 		setConversationId(conversationId);
 	};
 	// useEffect(() => {
@@ -103,7 +104,7 @@ export default function NufobotPage() {
 				</div>
 				<div className="w-fit ml-auto">
 					<button
-						className="bg-transparent"
+						className="bg-transparent border-none m-0"
 						onClick={() => createConversation()}
 					>
 						<FaPlus />

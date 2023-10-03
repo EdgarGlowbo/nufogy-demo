@@ -15,15 +15,17 @@ export default function HomeLayout({ children }) {
 				<div className="flex-row justify-start">
 					<Link href={"/"}>
 						<button
-							className={`top-tab ${pathname === "/" ? "border-primary" : ""} `}
+							className={`top-tab ${
+								pathname === "/" ? "!border-primary !border-b-2" : ""
+							} `}
 						>
 							<span>Dashboard</span>
 						</button>
 					</Link>
 					<Link href={"/feed"}>
 						<button
-							className={`top-tab ml-1 ${
-								pathname === "/feed" ? "border-primary" : ""
+							className={`top-tab ml-1  ${
+								pathname === "/feed" ? "!border-primary !border-b-2" : ""
 							} `}
 						>
 							<span>Feed</span>

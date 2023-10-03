@@ -17,7 +17,7 @@ export default function DashboardPage() {
 				<div>
 					<Link href={"pricing"}>
 						<button className="rounded-3xl bg-primary">
-							<span className="text-xl text-accent">Beneficios de Gold</span>
+							<span className="text-xl">Beneficios de Gold</span>
 						</button>
 					</Link>
 				</div>
@@ -26,7 +26,7 @@ export default function DashboardPage() {
 				{/* Streak */}
 				<div className="rounded-2xl py-3 px-2">
 					<h2 className="pb-3">Tu racha</h2>
-					<div className="rounded-2xl bg-accent py-2">
+					<div className="rounded-2xl bg-fallback-bg py-2">
 						<div className="rounded-full h-12 w-12 p-3 bg-background">
 							<FaCalendar />
 						</div>

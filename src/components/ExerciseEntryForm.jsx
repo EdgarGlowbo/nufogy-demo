@@ -48,7 +48,7 @@ export default function ExerciseEntryForm() {
 							modalRef.current.close();
 						}}
 					>
-						<FaXmark className="h-6 w-6 text-text " />
+						<FaXmark className="h-6 w-6 !text-text" />
 					</button>
 					<h3 className="font-bold text-lg">Registrar ejercicio</h3>
 
@@ -58,8 +58,8 @@ export default function ExerciseEntryForm() {
 						id="logExerciseForm"
 					>
 						<div className="form-control w-full max-w-xs">
-							<label className="label flex-col">
-								<span className="label-text self-start">
+							<label className="label flex-col text-text">
+								<span className="label-text self-start text-text opacity-80">
 									Nombre del ejercicio
 								</span>
 
@@ -67,17 +67,19 @@ export default function ExerciseEntryForm() {
 									type="text"
 									name="name"
 									placeholder="ej. Remo con barra"
-									className="!input !input-bordered !w-full !max-w-xs"
+									className="!input !input-bordered !w-full !max-w-xs !text-background"
 								/>
 							</label>
-							<label className="label flex-col">
-								<span className="label-text self-start">Descripción</span>
+							<label className="label flex-col text-text">
+								<span className="label-text self-start text-text opacity-80">
+									Descripción
+								</span>
 
 								<input
 									type="text"
 									name="desc"
 									placeholder="ej. 1er set, 12 reps con 45 lb por lado"
-									className="!input !input-bordered !w-full !max-w-xs"
+									className="!input !input-bordered !w-full !max-w-xs !text-background"
 								/>
 							</label>
 						</div>
@@ -85,7 +87,7 @@ export default function ExerciseEntryForm() {
 
 					<div className="modal-action">
 						<button
-							className="btn m-0 w-full h-full bg-accent"
+							className="btn m-0 w-full h-full bg-accent text-background border-none"
 							type="submit"
 							form="logExerciseForm"
 							disabled={isLoading}
