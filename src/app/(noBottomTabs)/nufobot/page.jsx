@@ -49,7 +49,7 @@ const presetsData = [
 export default function NufobotPage() {
 	const [showPresets, setShowPresets] = useState(true);
 	const [messages, setMessages] = useState([]);
-	const [conversationId, setConversationId] = useState(0);
+	const [conversationId, setConversationId] = useState(1);
 	const scrollDivRef = useRef();
 	const createConversation = async () => {
 		const res = await axios.post(
@@ -58,20 +58,24 @@ export default function NufobotPage() {
 				user: 1,
 			}
 		);
-		console.log(res.data);
+		const conversationId = res.data[res.data.length - 1].Id;
+		setMessages([]);
+		setConversationId(conversationId);
 	};
-	useEffect(() => {
-		const fetchData = async () => {
-			const res = await axios.get(
-				"https://nufogy-api.fly.dev/nufobot/mensaje/"
-			);
+	// useEffect(() => {
+	// 	const fetchData = async () => {
+	// 		const res = await axios.get(
+	// 			"https://nufogy-api.fly.dev/nufobot/mensaje/"
+	// 		);
 
-			// const filteredData = res.data.filter(msg => msg.conversation === conversationId )
+	// 		const filteredData = res.data.filter(
+	// 			(msg) => msg["conversacion id"] === conversationId
+	// 		);
 
-			setMessages(res.data);
-		};
-		fetchData();
-	}, []);
+	// 		setMessages(filteredData);
+	// 	};
+	// 	fetchData();
+	// }, []);
 
 	return (
 		<div className="h-screen w-screen">
@@ -121,6 +125,7 @@ export default function NufobotPage() {
 					messages={messages}
 					setMessages={setMessages}
 					scrollRef={scrollDivRef}
+					conversationId={conversationId}
 				/>
 			</footer>
 		</div>

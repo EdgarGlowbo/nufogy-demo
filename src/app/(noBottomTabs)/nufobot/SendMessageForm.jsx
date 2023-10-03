@@ -8,6 +8,7 @@ export default function SendMessageForm({
 	messages,
 	setMessages,
 	scrollRef,
+	conversationId,
 }) {
 	const [isLoading, setIsLoading] = useState(false);
 	const handleSubmit = async (e) => {
@@ -21,7 +22,7 @@ export default function SendMessageForm({
 		const message = {
 			ai_role: false,
 			content: inputMsg,
-			conversation: 1,
+			conversation: conversationId,
 		};
 		// const newMessages = [...messages];
 		// newMessages.push(message);
@@ -35,7 +36,11 @@ export default function SendMessageForm({
 
 		if (res.status === 200) {
 			e.target.reset();
-			setMessages(res.data);
+			const filteredData = res.data.filter(
+				(msg) => msg["conversacion id"] === conversationId
+			);
+
+			setMessages(filteredData);
 			setIsLoading(false);
 		}
 	};
